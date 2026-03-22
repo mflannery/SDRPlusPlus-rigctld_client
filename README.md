@@ -4,6 +4,16 @@ An [SDR++](https://github.com/AlexandreRouma/SDRPlusPlus) module that forwards e
 
 This module was created for SDR++ 1.2.1 running on a Fedora 43 Workstation.  It may or may not work on other versions of Fedora or other linux distributions. 
 
+There is compiled shared object file located in the build directory.  This was compiled on Fedora 43 Workstation for SDR++ version 1.2.1.  I have not tested this on any other linux distribution.  If you want to try this, you can copy the .so file from the build folder into the plugins directory.  On my version of Fedora this is located in /usr/lib64/sdrpp/plugins.  You can verify where your plugins folder is by running
+
+```bash
+grep modulesDirectory ~/.config/sdrpp/config.json
+```
+
+If moving this module int the plugins directory causes SDR++ to crash upon startup, just move the file out of the plugins directory.  
+
+To use the module, first add it from the module manager on the left side of the screen.  Next, add the server where you have rigctld running (localserver or 127.0.0.1) and then add the port rigctld is listening on (this was specified when rigctld was started) and then click "enable" and "connect".  If you see a green "connected" next to status then you are good to go.
+
 ![SDR++ version](https://img.shields.io/badge/SDR++-v1.2.1-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/platform-Linux-lightgrey)
