@@ -2,6 +2,8 @@
 
 An [SDR++](https://github.com/AlexandreRouma/SDRPlusPlus) module that forwards every frequency change in SDR++ to a [rigctld](https://hamlib.github.io/Hamlib/rigctld.1.html) daemon, so that a physical radio controlled by Hamlib tracks whatever you tune in SDR++.
 
+This module was created for SDR++ 1.2.1 running on a Fedora 43 Workstation.  It may or may not work on other versions of Fedora or other linux distributions. 
+
 ![SDR++ version](https://img.shields.io/badge/SDR++-v1.2.1-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/platform-Linux-lightgrey)
@@ -28,7 +30,7 @@ Two mechanisms ensure the rig always tracks SDR++:
 | GCC / Clang with C++17 | `sudo dnf install gcc-c++` / `sudo apt install build-essential` |
 | Hamlib | `sudo dnf install hamlib` / `sudo apt install libhamlib-dev` |
 
-> **Important:** The module must be compiled against the **exact same source commit** as your installed SDR++ binary. Mismatched builds will cause symbol lookup errors or crashes at startup.
+> **Important:** The module must be compiled against the **exact same source commit** as your installed SDR++ binary. Mismatched builds can cause symbol lookup errors or crashes at startup.
 >
 > To find your installed version:
 > ```bash
